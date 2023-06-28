@@ -1,0 +1,193 @@
+header.header{display: flex; /* use flexbox layout */
+  align-items: center; /* center the elements vertically within the header */}
+
+  .logo {
+    width: 250px; /* set the width of the logo */
+    height: 70px; /* set the height of the logo */
+    margin-right: 10px; /* add space between the logo and the "Collections" text */
+  }
+  
+  .logo-link {
+    display:block; /* make the whole link clickable */
+  }
+
+
+header.section-header {
+  margin-bottom: 0%;
+  height: 20%;
+  padding: 2%;
+
+}
+header.section-header h1 {
+  font-size: 36px; /* increase the font size */
+  font-weight: bold; /* make the text bold */
+  color: #fff;
+}
+
+
+
+.text-center {
+  text-align: center!important;
+  
+  
+}
+
+
+
+.collection {
+    display: grid;
+    grid-auto-columns: max-content;
+    grid-auto-flow: dense;
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 25px;
+    grid-template-columns: repeat(3, 3fr);
+    /* background-image: url(bk1.jpg); */
+    
+    /* //--- JUST VISUAL STYLING BELOW */
+      margin: 6px auto;
+      max-width: 1000px;
+  }
+  
+  .product {
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+  
+  }
+  .product:hover {
+    background-color: red;
+}
+
+
+  
+  /* //--- JUST VISUAL STYLING BELOW */
+    .product__image {
+      background-color: #e5e5e5;
+      display: block;
+      min-height: 200px;
+
+    }
+    
+    .product__name {
+      
+        font-family: sans-serif;
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;
+        
+        text-decoration: none;
+
+    }
+    .product__name a{
+        color: #fff !important;
+        width: 100% !important; 
+        top: 50% !important;
+    }
+    
+    /* .product__price {
+  
+      
+        font-family: sans-serif;
+        font-size: 14px;
+        text-align: center;
+        color: yellow;
+
+      } */
+
+
+      
+      .product__image-wrap {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        overflow: hidden;
+      }
+      
+      .product__image-wrap img{
+        width: 100%;
+        height: auto;
+      }
+      
+      img {
+        width: 20px;
+      }
+
+    
+
+
+      @media screen and (max-width: 600px) {
+        .product__image {
+          height: 80px;
+          flex-basis: 30%;
+        }
+        .product__name, .product__price {
+          flex-basis: 70%;
+        }
+      }
+
+
+
+
+
+
+
+      /* CSS for all devices */
+
+/* Add your existing CSS styles here */
+
+/* CSS for devices with a maximum width of 767px (phones) */
+@media (max-width: 767px) {
+  /* Adjust styles for phones */
+
+  /* Example: Adjust font sizes */
+  body {
+      font-size: 14px;
+  }
+
+  /* Example: Adjust logo size */
+  .logo {
+      max-width: 150px;
+  }
+
+  /* Example: Adjust navigation menu styles */
+  .navbar {
+      flex-direction: column;
+  }
+
+  /* Example: Adjust product grid styles */
+  .collection {
+      grid-template-columns: 1fr;
+  }
+
+  /* Add more styles as needed for optimal mobile layout */
+}
+
+/* CSS for devices with a minimum width of 768px (tablets and larger screens) */
+@media (min-width: 768px) {
+  /* Adjust styles for tablets and larger screens */
+
+  /* Example: Adjust font sizes */
+  body {
+      font-size: 16px;
+  }
+
+  /* Example: Adjust logo size */
+  .logo {
+      max-width: 200px;
+  }
+
+  /* Example: Adjust navigation menu styles */
+  .navbar {
+      flex-direction: row;
+  }
+
+  /* Example: Adjust product grid styles */
+  .collection {
+      grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Add more styles as needed for optimal tablet and desktop layout */
+}
